@@ -56,3 +56,6 @@ dkms.conf
 
 # Do not upload VIM backups
 *~
+
+# These are Dev C++ files with current cursor position
+*.layout
