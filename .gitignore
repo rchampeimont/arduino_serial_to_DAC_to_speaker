@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Do not upload WAV music for copyright reasons
+*.wav
+
+# Do not upload VIM backups
+*~
