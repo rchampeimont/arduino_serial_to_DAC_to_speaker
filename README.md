@@ -10,8 +10,6 @@ The "serial_to_DAC_to_speaker" directory contains the Arduino code.
 
 The "serial_sender" directory contains a rather trivial C program (to run on the computer) that copies a file to a serial port. Change it to use your own virtual serial port connected to the Arduino via the USB cable.
 
-If you want to connect a real serial port (see https://github.com/raphaelchampeimont/arduino_serial_to_LCD#variant-2-real-serial-port-rs232-with-custom-adapter-circuit about how to do that), you have to adapt the transfer rate because 450000 is too high (at least my computer refused to set this rate). I successfully tested it with audio sampled at 11.025 kHz and a serial port setting of 115200 bauds (you need to change the baud rate in both the Arduino code and the sender code).
-
 The file must be in Microsoft WAV Unsigned 8-bit mono, which basically means that the data consists of bytes from 0 to 255, each representing a point in the sound wave (this trivial encoding is called PCM). With Audacity you can transform any music file into this format by removing stereo, then exporting to "other uncompressed format" and selecting "Microsoft WAV" with "Unsigned 8-bit PCM" encoding.
 
 ## Circuit
@@ -20,3 +18,6 @@ The circuit uses a resistor ladder (https://en.wikipedia.org/wiki/Resistor_ladde
 If you want to test it yourself, you can start with only the resistors and you should already hear the music.
 
 ![Overview](/images/overwith_with_annot.jpg?raw=true)
+
+## Using a real (RS232) serial port
+If you want to connect a real serial port (see https://github.com/raphaelchampeimont/arduino_serial_to_LCD#variant-2-real-serial-port-rs232-with-custom-adapter-circuit about how to do that), you have to adapt the transfer rate because 450000 is too high (at least my computer refused to set this rate). I successfully tested it with audio sampled at 11.025 kHz and a serial port setting of 115200 bauds (you need to change the baud rate in both the Arduino code and the sender code).
