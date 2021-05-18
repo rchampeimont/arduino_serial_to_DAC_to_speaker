@@ -15,8 +15,8 @@ void loop() {
   int value = Serial.read();
   if (value >= 0) {
     byte valueByte = value;
-    PORTB = valueByte >> 2;
+    PORTB = valueByte >> 2; // sets pins 8 to 13
+    digitalWrite(7, (valueByte >> 1) & 0x1);
     digitalWrite(6, valueByte & 0x1);
-    digitalWrite(6, (valueByte >> 1) & 0x1);
   }
 }
