@@ -15,8 +15,10 @@ The file must be in Microsoft WAV Unsigned 8-bit mono (sampled at 44.1 kHz, whic
 If you want to connect a real serial port (see https://github.com/raphaelchampeimont/arduino_serial_to_LCD#variant-2-real-serial-port-rs232-with-custom-adapter-circuit about how to do that), you have to adapt the transfer rate because 450000 is too high (at least my computer refused to set this rate for its serial port). I successfully tested it with audio sampled at 11.025 kHz (which used to be a "regular" sampling rate in the past) and a serial port setting of 115200 bauds (one of the "standard" baud rates). If you want to do that you need to change the baud rate in both the Arduino code and the sender code and use audio sampled at 11.025 kHz.
 
 ## Circuit
-The circuit uses a resistor ladder (https://en.wikipedia.org/wiki/Resistor_ladder) as a DAC (Digital to Analog Converter) with R=100ohm. The black capacitor is 100 µF, is in series with the load (the speaker), and is used to remove the DC component (it's a best practice for speaker signals). The blue capacitor is 100 nF from the output to the ground and it used as a low-pass filter, although I wonder it it makes a real difference in practice (the capactitor is maybe a little too small).
+The circuit uses a resistor ladder (https://en.wikipedia.org/wiki/Resistor_ladder) as a DAC (Digital to Analog Converter). The capacitor in series with the load (the speaker) is used to remove the DC component (it's a best practice for speaker signals).
 
-If you want to test it yourself, you can start with only the resistors and you should already hear the music.
+![Circuit without operational amplifier](/images/circuit_without_op_amp.jpg?raw=true)
 
-![Overview](/images/overwith_with_annot.jpg?raw=true)
+I used the circuit successfully with headphones and my computer speakers (which include an amplifier). If you want to use a "raw" speaker, you need to use an amplifier circuit to get higher current, like this:
+
+![Circuit with operational amplifier](/images/circuit_with_op_amp.jpg?raw=true)
