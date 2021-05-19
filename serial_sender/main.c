@@ -16,11 +16,10 @@ int main(int argc, char *argv[]) {
 	FILE *f = fopen("../take_on_me_unsigned_8bit_mono.wav", "rb");
 	
 	// Replace COM4 with your own virtual serial port connected to the Arduino
-	FILE *serialPort = fopen(PORT, "wb");
-	
-	printf("Sending data to " PORT " port...\n");
+	FILE *serialPort = fopen(PORT, "wb");	
 	
 	while (1) {
+		printf("Sending file to " PORT " port...\n");
 		while ((readByte = getc(f)) != EOF) {
 			putc(readByte, serialPort);
 		}
