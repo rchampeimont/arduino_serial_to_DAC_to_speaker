@@ -26,3 +26,9 @@ I used the circuit above successfully with headphones and my computer speakers (
 Here is what this second circuit looks like:
 
 ![Photo of circuit with operational amplifier](/images/circuit_with_op_amp_photo.jpg?raw=true)
+
+## Visualization on oscilloscope
+
+![Input and output signals on oscilloscope](/images/serial_and_audio_output_on_scope.jpg?raw=true)
+
+The yellow line (top) is the serial signal (measured on the Arduino Uno RX pin, which is connected to the RX signal received through the USB cable) while the green line (bottom) is the audio output.
