@@ -19,6 +19,16 @@ The circuit uses a resistor ladder (https://en.wikipedia.org/wiki/Resistor_ladde
 
 ![Circuit without operational amplifier](/images/circuit_without_op_amp.jpg?raw=true)
 
-I used the circuit successfully with headphones and my computer speakers (which include an amplifier). If you want to use a "raw" speaker, you need to use an amplifier circuit to get higher current, like this:
+I used the circuit above successfully with headphones and my computer speakers (which include an amplifier). If you want to use a "raw" speaker, you need to use an amplifier circuit to get higher current, like this:
 
 ![Circuit with operational amplifier](/images/circuit_with_op_amp.jpg?raw=true)
+
+Here is what this second circuit looks like:
+
+![Photo of circuit with operational amplifier](/images/circuit_with_op_amp_photo.jpg?raw=true)
+
+## Visualization on oscilloscope
+
+![Input and output signals on oscilloscope](/images/serial_and_audio_output_on_scope.jpg?raw=true)
+
+The yellow line (top) is the serial signal (measured on the Arduino Uno RX pin, which is connected to the RX signal received through the USB cable) while the green line (bottom) is the audio output.
