@@ -1,3 +1,5 @@
+// Uses pins OUTPUT_FIRST_PIN to OUTPUT_FIRST_PIN + 7.
+// OUTPUT_FIRST_PIN is the least significant bit
 const int OUTPUT_FIRST_PIN = 6;
 
 void setup() {
